@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Character Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Character Manager</h1>
+
+  <section id="upload-section">
+    <h2>Upload Character JSON</h2>
+    <form id="upload-form">
+      <input type="file" id="file-input" accept=".txt" required />
+      <input type="password" id="key-input" placeholder="Your secret key" required />
+      <button type="submit">Upload</button>
+    </form>
+    <div id="upload-message"></div>
+  </section>
+
+  <hr/>
+
+  <section id="search-section">
+    <h2>Search / View Characters</h2>
+    <input type="text" id="search-input" placeholder="Search by name..." />
+    <button id="show-all-btn">Show All</button>
+    <ul id="results-list"></ul>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden">
+    <div id="modal-content">
+      <button id="close-modal">Close</button>
+      <div id="details"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
